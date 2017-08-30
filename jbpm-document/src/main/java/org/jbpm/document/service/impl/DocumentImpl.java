@@ -150,6 +150,10 @@ public class DocumentImpl implements Document {
     @Override
     public String toString() {
         SimpleDateFormat sdf = new SimpleDateFormat( DOCUMENT_DATE_PATTERN );
-        return  name + PROPERTIES_SEPARATOR + size + PROPERTIES_SEPARATOR + ((lastModified!=null)? sdf.format( lastModified ) : "" ) + PROPERTIES_SEPARATOR + link ;
+        return  name + PROPERTIES_SEPARATOR +
+                size + PROPERTIES_SEPARATOR +
+                ((lastModified!=null)? sdf.format( lastModified ) : "" ) + PROPERTIES_SEPARATOR +
+                link + PROPERTIES_SEPARATOR +
+                identifier;
     }
 }
